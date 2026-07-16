@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Portfolio</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img src="sunil.jpg" alt="Profile picture" class="hero-img" id="heroImg">
+    <p id="clickCount">Clicked 0 times</p>
+    <h1 id="name">Sunil Lamichhane</h1>
+    <p>Computer Engineering Student</p>
+    <button id="themeBtn">Toggle Dark Mode</button>
+    <button id="surpriseBtn">Surprise Me</button>
+    <p id="factText"></p>
+  </section>
+
+  <section class="card" id="about">
+    <h2>About Me</h2>
+    <p>I am a student learning frontend development, one project at a time.</p>
+  </section>
+
+  <section class="card" id="skills">
+    <h2>Skills</h2>
+    <button id="toggleSkillsBtn">Hide Skills</button>
+    <ul id="skillList"></ul>
+  </section>
+
+  <footer id="contact">
+    <p>Reach me at: example@email.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

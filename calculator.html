@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            height: 75px;
+            width: 75px;
+        }
+    </style>
+</head>
+
+<body style="background-color: pink; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div style="background-color: antiquewhite; height: 50vh; width: 50vw;">
+        <div style="background-color: white; height: 10vh; width: 50vw;" class="result-display">
+            
+        </div>
+        <div style="background-color: antiquewhite; height: 40vh; width: 50vw;">
+            <button onclick="handleClick(1)">1</button>
+            <button onclick="handleClick(2)">2</button>
+            <button onclick="handleClick(3)">3</button>
+            <button onclick="handleClick(4)">4</button>
+            <button onclick="handleClick(5)">5</button>
+            <button onclick="handleClick(6)">6</button>
+            <button onclick="handleClick(7)">7</button>
+            <button onclick="handleClick(8)">8</button>
+            <button onclick="handleClick(9)">9</button>
+            <button onclick="handleClick(0)">0</button>
+            <button onclick="handleClick('+')">+</button>
+            <button onclick="handleClick('-')">-</button>
+            <button onclick="handleClick('=')">=</button>
+            <button onclick="handleClick('')">CLEAR</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    display = document.querySelector(".result-display").innerText
+    function handleClick(x) {
+        if (x == '=') {
+            if (display == '') {
+                return
+            }
+            document.querySelector(".result-display").innerText = eval(display)
+            console.log(eval(display), "is the answer.")
+            display = ''
+            return
+        }
+
+        if (x == 'clear') {
+            document.querySelector(".result-display").innerText = ''
+            display = ''
+            return
+        }
+
+        display = display + x
+        document.querySelector(".result-display").innerText = display
+    }
+</script>
+
+</html>
